@@ -1,19 +1,17 @@
-# Proyecto_Integrador
+# Spotify system
 
-Modelación del servicio de Spotify 
-
-En este proyecto se propone hacer una modelación del sistema de Spotify.
-Spotify tiene dos tipos de audios: canciones y Podcasts.
-Cada audio pertenecerá a un canal de Spotify, el cuál tendrá como atributos: Nombre del canal, Nombre del dueño, subscriptores, tipo de canal (canciones - podcast)
-Los audios cuentan con: ID, nombre, duración, visitas, likes, dislikes, comentarios y género.
-los Podcasts tiene episodios, los cuáles pertenecen a una temporada.
-Se quiere saber el porcentaje de likes tiene cada audio con respecto al total de likes y dislikes, es decir, la satiscacción de los usuarios.
-
-
-El sistema será capaz de:
-Mostrar los canales disponibles, junto con su nombre, dueño, subscriptores y su tipo.
-Montrar la colección de canciones junto con su ID, nombre, duración, visitas, likes, dislikes, comentarios, género y la satisfacción. 
-Mostrar los episodios que tiene un podcast junto con su ID, nombre, duración, visitas, likes, dislikes, comentarios, género y la satisfacción.
+In this project it is intended to give a simulation to the system used by spotify.
+Spotify has 2 types of audios: Songs and Podcasts. 
+All audios have: ID, name, duration, views, likes, dislikes, comments, genre, and the rating of the users which is the percentage of likes in regard to the total of likes and dislikes.
+Podcasts have episodes. All episodes show a resume of the episode.
+Episodes belong to a Season. The season displays the number of episodes. 
+The system Will show: 
+The song collection with its ID, name, duration, views, likes, dislikes, comments, genre, and the rating of the users. 
+The seasons of the podcast, as well as the episode that a podcast has with its name and description
 
 
-//Este proyecto fue inspirado por la situación problema presentada en el inicio de la materia POO
+How to use:
+The fist imput from user shpul be only 1, 2,3 or 4
+When selecting 2. The season and the epidosde required should be 1
+When selecting 3. 1, 2 and 3 are the only options
+
