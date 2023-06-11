@@ -18,15 +18,11 @@ class Audio{
     public:
         Audio();
         Audio (int, string, double, int, int, int, string, string);
-        int calculateSatisfaction();
-        virtual void reproduce();
-        int getID();
-        string getNameAudio();
-        double getDuration();
-        int getNumberOfReproductions();
-        int getLikes();
-        int getDislikes();
-        string getComments();
-        string getGenere();
+        double calculateSatisfaction();
+        //Polymorphism aplied since classes hace different ways of doing the same method
+        virtual void reproduce()=0;
+        virtual void showInformation();
+        int getID() ;
+
 };
 #endif

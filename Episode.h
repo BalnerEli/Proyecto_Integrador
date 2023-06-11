@@ -7,10 +7,13 @@ using namespace std;
 class Episode{
     private:
         string description;
+        string nameEpisode;
 
     public:
         Episode();
-        Episode (int);
+        Episode (string, string);
         string getDescription();
+        string getNameEpisode();
 };
 #endif
+

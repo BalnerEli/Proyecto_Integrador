@@ -1,52 +1,52 @@
 #include "Audio.h"
+#include "Podcast.h"
+#include "Song.h"
 
-Audio::Audio(string nameAudio, double duration, int numberOfReproductions, int likes, int dislikes, string comments, string genere)
-{
-    this->nameAudio= nameAudio;
-    this->duration= duration;
-    this->nameAudio= numberOfReproductions;
-    this->duration= likes;
-    this->nameAudio= dislikes;
-    this->duration= comments;
-    this->nameAudio= genere;
+Audio::Audio(){
+    ID=0;
+    nameAudio= "";
+    duration= 0;
+    numberOfReproductions= 0;
+    likes= 0;
+    dislikes= 0;
+    comments= "";
+    genere= "";
 }
-
-int Audio::calculateSatisfaction()
-{
-    return likes*100/(likes + dislikes);
-}
-
-string Audio::reproduce()
-{
-    return "Se está reproduciendo";
-}
-
-string Audio::getNameAudio()
-{
-    return nameAudio
+Audio::Audio(int _ID, string _nameAudio, double _duration, int _numberOfReproductions, int _likes, int _dislikes, string _comments, string _genere){
+    ID=_ID;
+    nameAudio= _nameAudio;
+    duration= _duration;
+    numberOfReproductions= _numberOfReproductions;
+    likes= _likes;
+    dislikes= _dislikes;
+    comments= _comments;
+    genere= _genere;
 }
 
-string Audio::getDuration()
+int Audio::getID()
 {
-    return duration
+    return ID;
 }
-string Audio::getNumberOfReproductions()
+
+void Audio::showInformation()  {
+    std::cout << "ID: " << ID << std::endl;
+    std::cout << "Name: " << nameAudio << std::endl;
+    std::cout << "Duration: " << duration << " min" << std::endl;
+    std::cout << "Number of Reproductions: " << numberOfReproductions << std::endl;
+    std::cout << "Likes: " << likes << std::endl;
+    std::cout << "Dislikes: " << dislikes << std::endl;
+    std::cout << "Genere: " << genere << std::endl;
+    std::cout << "Comments: " << comments << std::endl;
+    std::cout << "Satisfacción: " << calculateSatisfaction() << "%" << std::endl;
+}
+
+double Audio::calculateSatisfaction()
 {
-    return numberOfReproductions
+    int total=likes+dislikes;
+    if (total == 0)
+        return 0.0;
+    else
+        return (static_cast<double>(likes) / total) * 100;
 }
-string Audio::getLikes()
-{
-    return likes
-}
-string Audio::getDislikes()
-{
-    return dislikes
-}
-string Audio::getComments()
-{
-    return comments
-}
-string Audio::getGenere()
-{
-    return genere
-}
+
+

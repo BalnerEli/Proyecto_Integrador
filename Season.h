@@ -1,18 +1,26 @@
 //SEASON.h
-#ifndef SEASON
-#define SEASON
+#ifndef SEASON_H
+#define SEASON_H
+#include <vector>
+#include <typeinfo>
 #include <iostream>
 using namespace std;
 #include "Episode.h"
 
+//use of inheritance 
 class Season{
     private:
-        Episode Episodes;
+        vector <Episode*> episodes;
         int numberOfEpisodes;
 
     public:
-        Season();
-        Season (int);
+        Season(vector <Episode*>);
+        Season(int);
+        vector <Episode*> getEpisodes();
+        void addEpisode(Episode*);
         int getNumberOfEpisodes();
+        string getSeasonInfo();
 };
-#endif
+#endif //SEASON_H
+
+
