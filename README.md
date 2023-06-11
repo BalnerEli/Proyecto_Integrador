@@ -11,7 +11,8 @@ The seasons of the podcast, as well as the episode that a podcast has with its n
 
 
 How to use:
-The fist imput from user shpul be only 1, 2,3 or 4
-When selecting 2. The season and the epidosde required should be 1
+The first input from user should be only 1, 2,3 or 4
+When selecting 2. The season and the episode required should be 1
 When selecting 3. 1, 2 and 3 are the only options
+
 
