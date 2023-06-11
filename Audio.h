@@ -5,7 +5,7 @@
 using namespace std;
 
 class Audio{
-    private:
+    protected:
         int ID ;
         string nameAudio;
         double duration;
@@ -17,11 +17,12 @@ class Audio{
 
     public:
         Audio();
-        Audio (int , string, double, int, int, int, string, string);
-        int calculateSatisfaction():
+        Audio (int, string, double, int, int, int, string, string);
+        int calculateSatisfaction();
+        virtual void reproduce();
         int getID();
         string getNameAudio();
-        double getDuration():
+        double getDuration();
         int getNumberOfReproductions();
         int getLikes();
         int getDislikes();

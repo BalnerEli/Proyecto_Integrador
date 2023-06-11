@@ -2,10 +2,12 @@
 #ifndef CHANNEL
 #define CHANNEL
 #include <iostream>
+#include "Audio.h"
 using namespace std;
 
 class Channel{
     private:
+        Audio Audios;
         string ownerName;
         string chanelName;
         int subscribers;
@@ -13,7 +15,8 @@ class Channel{
 
     public:
         Channel();
-        Channel (string, sitring, int, string);
+        Channel (string, string, int, string);
+        void agregaAudio(Audio)
         int addSubscriber ();
         int substractSubscriber ();
         int getOwnerName();
@@ -22,3 +25,4 @@ class Channel{
         string getChannelTipe ();
 };
 #endif
+

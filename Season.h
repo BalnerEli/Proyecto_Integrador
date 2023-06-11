@@ -3,14 +3,16 @@
 #define SEASON
 #include <iostream>
 using namespace std;
+#include "Episode.h"
 
-class SEASON{
+class Season{
     private:
+        Episode Episodes;
         int numberOfEpisodes;
 
     public:
-        Episode();
-        Episode (int);
+        Season();
+        Season (int);
         int getNumberOfEpisodes();
 };
 #endif
